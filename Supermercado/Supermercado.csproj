@@ -58,14 +58,59 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Data.cs" />
+    <Compile Include="Frames\frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\frmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\frmCompras.Designer.cs">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\frmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\frmEmpleados.Designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\frmFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\frmFacturas.Designer.cs">
+      <DependentUpon>frmFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frames\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frames\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frames\frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\frmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frames\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

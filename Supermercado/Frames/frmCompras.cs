@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Supermercado.Frames
 {
-    public partial class frmMenu : Form
+    public partial class frmCompras : Form
     {
-        public frmMenu()
+        public frmCompras()
         {
             InitializeComponent();
-        }
-
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            frmClientes frm = new frmClientes();
-            frm.Show();
-            this.Hide();
         }
     }
 }
