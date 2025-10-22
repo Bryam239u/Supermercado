@@ -11,7 +11,7 @@ namespace Supermercado.Clases
 {
     internal class Data
     {
-        private string connectionString = "Host = localhost; Username = admin; Password = admin; Database = Supermercado";
+        private string connectionString = "Host=localhost;Port=5432;Username=admin;Password=bryam;Database=Supermercado";
 
         public NpgsqlConnection GetConnection()
         {
@@ -24,7 +24,7 @@ namespace Supermercado.Clases
 
             catch (Exception ex)
             {
-                Console.WriteLine("Error al" + "conectar a la base de datos: " + ex.Message);
+                MessageBox.Show("Error al" + "conectar a la base de datos: " + ex.Message);
                 return null;
             }
         }
@@ -37,12 +37,12 @@ namespace Supermercado.Clases
                 {
                     if (conn != null && conn.State == System.Data.ConnectionState.Open)
                     {
-                        Console.WriteLine("Conexión exitosa a la base de datos.");
+                        MessageBox.Show("Conexión exitosa a la base de datos.");
                         return true;
                     }
                     else
                     {
-                        Console.WriteLine("Error al conectar a la base de datos.");
+                        MessageBox.Show("Error al conectar a la base de datos.");
                         return false;
                     }
                 }
@@ -50,7 +50,7 @@ namespace Supermercado.Clases
 
             catch (Exception ex)
             {
-                Console.WriteLine("Error al probar la conexión: " + ex.Message);
+                MessageBox.Show("Error al probar la conexión: " + ex.Message);
                 return false;
             }
 
@@ -67,7 +67,6 @@ namespace Supermercado.Clases
             catch (Exception ex)
             {
                 MessageBox.Show("Error SQL: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 return false;
             }
         }

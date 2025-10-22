@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Supermercado.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Supermercado.Frames
 {
     public partial class frmMenu : Form
     {
+        Data datos = new Data();
         public frmMenu()
         {
             InitializeComponent();
@@ -22,6 +24,11 @@ namespace Supermercado.Frames
             frmClientes frm = new frmClientes();
             frm.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bool a = datos.TestConnection();
         }
     }
 }
