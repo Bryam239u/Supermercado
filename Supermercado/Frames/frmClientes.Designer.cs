@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.cmsOpc = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editarTSM = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarTSM = new System.Windows.Forms.ToolStripMenuItem();
             this.mtxtbNro_tel_sec = new System.Windows.Forms.MaskedTextBox();
             this.mtxtbNro_tel_princ = new System.Windows.Forms.MaskedTextBox();
             this.txtbEmail = new System.Windows.Forms.TextBox();
@@ -50,14 +54,31 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            this.cmsOpc.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvClientes
             // 
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.ContextMenuStrip = this.cmsOpc;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClientes.Location = new System.Drawing.Point(350, 142);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
@@ -66,8 +87,25 @@
             // 
             // cmsOpc
             // 
+            this.cmsOpc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarTSM,
+            this.eliminarTSM});
             this.cmsOpc.Name = "cmsOpc";
-            this.cmsOpc.Size = new System.Drawing.Size(61, 4);
+            this.cmsOpc.Size = new System.Drawing.Size(181, 70);
+            // 
+            // editarTSM
+            // 
+            this.editarTSM.Name = "editarTSM";
+            this.editarTSM.Size = new System.Drawing.Size(180, 22);
+            this.editarTSM.Text = "Editar";
+            this.editarTSM.Click += new System.EventHandler(this.editarTSM_Click);
+            // 
+            // eliminarTSM
+            // 
+            this.eliminarTSM.Name = "eliminarTSM";
+            this.eliminarTSM.Size = new System.Drawing.Size(180, 22);
+            this.eliminarTSM.Text = "Eliminar";
+            this.eliminarTSM.Click += new System.EventHandler(this.eliminarTSM_Click);
             // 
             // mtxtbNro_tel_sec
             // 
@@ -208,6 +246,7 @@
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnCerrar
             // 
@@ -218,6 +257,7 @@
             this.btnCerrar.TabIndex = 30;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // label1
             // 
@@ -265,9 +305,11 @@
             this.Controls.Add(this.dgvClientes);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            this.cmsOpc.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +337,7 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripMenuItem editarTSM;
+        private System.Windows.Forms.ToolStripMenuItem eliminarTSM;
     }
 }
