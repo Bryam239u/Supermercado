@@ -82,6 +82,7 @@
             this.btnEmpleados.TabIndex = 11;
             this.btnEmpleados.Text = "EMPLEADOS";
             this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnComprasCli
             // 
@@ -126,6 +127,7 @@
             this.Controls.Add(this.btnComprasCli);
             this.Controls.Add(this.btnClientes);
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.ResumeLayout(false);
 
