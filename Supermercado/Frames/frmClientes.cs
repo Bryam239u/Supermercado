@@ -160,5 +160,20 @@ namespace Supermercado.Frames
                 }
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            DataSet ds = datos.getAllData("SELECT * FROM clientes Where nombre like '" + txtBuscar.Text + "%' OR apellido like '" + txtBuscar.Text + "%' OR " +
+                "tipo_doc like '" + txtBuscar.Text + "%' OR nro_doc like '" + txtBuscar.Text + "%' OR nro_tel_princ like '" + txtBuscar.Text + "%' OR nro_tel_sec like '" 
+                + txtBuscar.Text + "%' OR email like '" + txtBuscar.Text + "%';");
+            if (ds != null)
+            {
+                dgvClientes.DataSource = ds.Tables[0];
+            }
+            else
+            {
+                MessageBox.Show("Error al cargar los datos");
+            }
+        }
     }
 }

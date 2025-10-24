@@ -52,7 +52,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.cmsOpc.SuspendLayout();
             this.SuspendLayout();
@@ -91,19 +91,19 @@
             this.editarTSM,
             this.eliminarTSM});
             this.cmsOpc.Name = "cmsOpc";
-            this.cmsOpc.Size = new System.Drawing.Size(181, 70);
+            this.cmsOpc.Size = new System.Drawing.Size(118, 48);
             // 
             // editarTSM
             // 
             this.editarTSM.Name = "editarTSM";
-            this.editarTSM.Size = new System.Drawing.Size(180, 22);
+            this.editarTSM.Size = new System.Drawing.Size(117, 22);
             this.editarTSM.Text = "Editar";
             this.editarTSM.Click += new System.EventHandler(this.editarTSM_Click);
             // 
             // eliminarTSM
             // 
             this.eliminarTSM.Name = "eliminarTSM";
-            this.eliminarTSM.Size = new System.Drawing.Size(180, 22);
+            this.eliminarTSM.Size = new System.Drawing.Size(117, 22);
             this.eliminarTSM.Text = "Eliminar";
             this.eliminarTSM.Click += new System.EventHandler(this.eliminarTSM_Click);
             // 
@@ -270,13 +270,14 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Clientes:";
             // 
-            // textBox1
+            // txtBuscar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(358, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(408, 31);
-            this.textBox1.TabIndex = 32;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(358, 30);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(408, 31);
+            this.txtBuscar.TabIndex = 32;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // frmClientes
             // 
@@ -284,7 +285,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(963, 606);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnAgregar);
@@ -336,7 +337,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ToolStripMenuItem editarTSM;
         private System.Windows.Forms.ToolStripMenuItem eliminarTSM;
     }
