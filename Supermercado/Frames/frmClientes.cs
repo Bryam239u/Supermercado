@@ -31,6 +31,7 @@ namespace Supermercado.Frames
             mtxtbNro_tel_sec.Text = "";
             txtbEmail.Text = "";
             btnAgregar.Text = "Agregar";
+            id = -1;
         }
 
         private void mostrarDatos()
@@ -93,7 +94,7 @@ namespace Supermercado.Frames
                 resultado = datos.ExecuteQuery(queryUpdate);
                 if (resultado)
                 {
-                    MessageBox.Show("Registro agregado con éxito", "Siste", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Registro agregado con éxito", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiar();
                     mostrarDatos();
                 }
@@ -105,7 +106,7 @@ namespace Supermercado.Frames
             }
             else
             {
-                string queryup = "UPDATE public.\"clientes\" SET " +
+                string queryup = "UPDATE clientes SET " +
                     "nombre = '" + txtbNombre.Text + "', " +
                     "apellido = '" + txtbApellido.Text + "', " +
                     "tipo_doc = '" + txtbTipo_doc.Text + "', " +

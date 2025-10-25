@@ -32,6 +32,9 @@
             this.mtxtbNro_tel_sec = new System.Windows.Forms.MaskedTextBox();
             this.mtxtbNro_tel_princ = new System.Windows.Forms.MaskedTextBox();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
+            this.cmsOpc = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editarTSM = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarTSM = new System.Windows.Forms.ToolStripMenuItem();
             this.txtbCargo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtbSalario_anual = new System.Windows.Forms.TextBox();
@@ -64,9 +67,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.cmsOpc = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.editarTSM = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarTSM = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.cmsOpc.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +78,7 @@
             this.mtxtbNro_tel_sec.Mask = "000-000-0000";
             this.mtxtbNro_tel_sec.Name = "mtxtbNro_tel_sec";
             this.mtxtbNro_tel_sec.Size = new System.Drawing.Size(151, 29);
-            this.mtxtbNro_tel_sec.TabIndex = 86;
+            this.mtxtbNro_tel_sec.TabIndex = 9;
             // 
             // mtxtbNro_tel_princ
             // 
@@ -87,7 +87,7 @@
             this.mtxtbNro_tel_princ.Mask = "000-000-0000";
             this.mtxtbNro_tel_princ.Name = "mtxtbNro_tel_princ";
             this.mtxtbNro_tel_princ.Size = new System.Drawing.Size(151, 29);
-            this.mtxtbNro_tel_princ.TabIndex = 85;
+            this.mtxtbNro_tel_princ.TabIndex = 6;
             // 
             // dgvEmpleados
             // 
@@ -102,13 +102,35 @@
             this.dgvEmpleados.Size = new System.Drawing.Size(931, 282);
             this.dgvEmpleados.TabIndex = 82;
             // 
+            // cmsOpc
+            // 
+            this.cmsOpc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarTSM,
+            this.eliminarTSM});
+            this.cmsOpc.Name = "cmsOpc";
+            this.cmsOpc.Size = new System.Drawing.Size(118, 48);
+            // 
+            // editarTSM
+            // 
+            this.editarTSM.Name = "editarTSM";
+            this.editarTSM.Size = new System.Drawing.Size(180, 22);
+            this.editarTSM.Text = "Editar";
+            this.editarTSM.Click += new System.EventHandler(this.editarTSM_Click);
+            // 
+            // eliminarTSM
+            // 
+            this.eliminarTSM.Name = "eliminarTSM";
+            this.eliminarTSM.Size = new System.Drawing.Size(180, 22);
+            this.eliminarTSM.Text = "Eliminar";
+            this.eliminarTSM.Click += new System.EventHandler(this.eliminarTSM_Click);
+            // 
             // txtbCargo
             // 
             this.txtbCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbCargo.Location = new System.Drawing.Point(678, 312);
             this.txtbCargo.Name = "txtbCargo";
             this.txtbCargo.Size = new System.Drawing.Size(241, 29);
-            this.txtbCargo.TabIndex = 81;
+            this.txtbCargo.TabIndex = 12;
             // 
             // label12
             // 
@@ -126,7 +148,7 @@
             this.txtbSalario_anual.Location = new System.Drawing.Point(678, 381);
             this.txtbSalario_anual.Name = "txtbSalario_anual";
             this.txtbSalario_anual.Size = new System.Drawing.Size(241, 29);
-            this.txtbSalario_anual.TabIndex = 79;
+            this.txtbSalario_anual.TabIndex = 15;
             // 
             // txtbFecha_ingreso
             // 
@@ -134,7 +156,7 @@
             this.txtbFecha_ingreso.Location = new System.Drawing.Point(373, 381);
             this.txtbFecha_ingreso.Name = "txtbFecha_ingreso";
             this.txtbFecha_ingreso.Size = new System.Drawing.Size(241, 29);
-            this.txtbFecha_ingreso.TabIndex = 78;
+            this.txtbFecha_ingreso.TabIndex = 14;
             // 
             // txtbAntiguedad
             // 
@@ -142,7 +164,7 @@
             this.txtbAntiguedad.Location = new System.Drawing.Point(18, 381);
             this.txtbAntiguedad.Name = "txtbAntiguedad";
             this.txtbAntiguedad.Size = new System.Drawing.Size(241, 29);
-            this.txtbAntiguedad.TabIndex = 77;
+            this.txtbAntiguedad.TabIndex = 13;
             // 
             // label13
             // 
@@ -180,7 +202,7 @@
             this.txtbDireccion.Location = new System.Drawing.Point(373, 176);
             this.txtbDireccion.Name = "txtbDireccion";
             this.txtbDireccion.Size = new System.Drawing.Size(241, 29);
-            this.txtbDireccion.TabIndex = 73;
+            this.txtbDireccion.TabIndex = 5;
             // 
             // txtbCuil
             // 
@@ -188,7 +210,7 @@
             this.txtbCuil.Location = new System.Drawing.Point(373, 245);
             this.txtbCuil.Name = "txtbCuil";
             this.txtbCuil.Size = new System.Drawing.Size(241, 29);
-            this.txtbCuil.TabIndex = 72;
+            this.txtbCuil.TabIndex = 8;
             // 
             // label9
             // 
@@ -216,7 +238,7 @@
             this.txtbFecha_nac.Location = new System.Drawing.Point(18, 176);
             this.txtbFecha_nac.Name = "txtbFecha_nac";
             this.txtbFecha_nac.Size = new System.Drawing.Size(241, 29);
-            this.txtbFecha_nac.TabIndex = 69;
+            this.txtbFecha_nac.TabIndex = 4;
             // 
             // txtbEdad
             // 
@@ -224,7 +246,7 @@
             this.txtbEdad.Location = new System.Drawing.Point(678, 109);
             this.txtbEdad.Name = "txtbEdad";
             this.txtbEdad.Size = new System.Drawing.Size(241, 29);
-            this.txtbEdad.TabIndex = 68;
+            this.txtbEdad.TabIndex = 3;
             // 
             // label1
             // 
@@ -252,7 +274,7 @@
             this.txtbEmail.Location = new System.Drawing.Point(18, 245);
             this.txtbEmail.Name = "txtbEmail";
             this.txtbEmail.Size = new System.Drawing.Size(241, 29);
-            this.txtbEmail.TabIndex = 65;
+            this.txtbEmail.TabIndex = 7;
             // 
             // txtbNro_doc
             // 
@@ -260,7 +282,7 @@
             this.txtbNro_doc.Location = new System.Drawing.Point(373, 312);
             this.txtbNro_doc.Name = "txtbNro_doc";
             this.txtbNro_doc.Size = new System.Drawing.Size(241, 29);
-            this.txtbNro_doc.TabIndex = 64;
+            this.txtbNro_doc.TabIndex = 11;
             // 
             // txtbTipo_doc
             // 
@@ -268,7 +290,7 @@
             this.txtbTipo_doc.Location = new System.Drawing.Point(18, 312);
             this.txtbTipo_doc.Name = "txtbTipo_doc";
             this.txtbTipo_doc.Size = new System.Drawing.Size(241, 29);
-            this.txtbTipo_doc.TabIndex = 63;
+            this.txtbTipo_doc.TabIndex = 10;
             // 
             // txtbApellido
             // 
@@ -276,7 +298,7 @@
             this.txtbApellido.Location = new System.Drawing.Point(373, 109);
             this.txtbApellido.Name = "txtbApellido";
             this.txtbApellido.Size = new System.Drawing.Size(241, 29);
-            this.txtbApellido.TabIndex = 62;
+            this.txtbApellido.TabIndex = 2;
             // 
             // txtbNombre
             // 
@@ -284,7 +306,7 @@
             this.txtbNombre.Location = new System.Drawing.Point(18, 109);
             this.txtbNombre.Name = "txtbNombre";
             this.txtbNombre.Size = new System.Drawing.Size(241, 29);
-            this.txtbNombre.TabIndex = 61;
+            this.txtbNombre.TabIndex = 1;
             // 
             // label7
             // 
@@ -363,6 +385,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(408, 31);
             this.txtBuscar.TabIndex = 88;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label16
             // 
@@ -384,6 +407,7 @@
             this.btnCerrar.TabIndex = 90;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnAgregar
             // 
@@ -395,26 +419,7 @@
             this.btnAgregar.TabIndex = 89;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
-            // 
-            // cmsOpc
-            // 
-            this.cmsOpc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editarTSM,
-            this.eliminarTSM});
-            this.cmsOpc.Name = "cmsOpc";
-            this.cmsOpc.Size = new System.Drawing.Size(118, 48);
-            // 
-            // editarTSM
-            // 
-            this.editarTSM.Name = "editarTSM";
-            this.editarTSM.Size = new System.Drawing.Size(117, 22);
-            this.editarTSM.Text = "Editar";
-            // 
-            // eliminarTSM
-            // 
-            this.eliminarTSM.Name = "eliminarTSM";
-            this.eliminarTSM.Size = new System.Drawing.Size(117, 22);
-            this.eliminarTSM.Text = "Eliminar";
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmEmpleados
             // 
@@ -459,6 +464,7 @@
             this.Name = "frmEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleados";
+            this.Load += new System.EventHandler(this.frmEmpleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.cmsOpc.ResumeLayout(false);
             this.ResumeLayout(false);
