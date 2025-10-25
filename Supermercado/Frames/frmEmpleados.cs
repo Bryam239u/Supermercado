@@ -231,8 +231,6 @@ namespace Supermercado.Frames
                "antiguedad as \"Antiguedad\"," +
                "fecha_ingreso as \"Fecha de Ingreso\"," +
                "salario_anual as \"Salario Anual\" FROM empleados " +
-
-               // Cláusula WHERE buscando en todos los campos de texto
                "WHERE nombre like '" + txtBuscar.Text + "%' OR " +
                "apellido like '" + txtBuscar.Text + "%' OR " +
                "tipo_doc like '" + txtBuscar.Text + "%' OR " +

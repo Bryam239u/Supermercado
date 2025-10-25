@@ -37,5 +37,12 @@ namespace Supermercado.Frames
             emp.Show();
             this.Hide();
         }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            frmProveedores proveedores = new frmProveedores();
+            proveedores.Show();
+            this.Hide();
+        }
     }
 }
