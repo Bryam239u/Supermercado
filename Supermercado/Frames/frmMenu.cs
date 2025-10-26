@@ -44,5 +44,12 @@ namespace Supermercado.Frames
             proveedores.Show();
             this.Hide();
         }
+
+        private void btnFacturas_Click(object sender, EventArgs e)
+        {
+            frmFacturas f = new frmFacturas();
+            f.Show();
+            this.Hide();
+        }
     }
 }

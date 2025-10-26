@@ -49,7 +49,7 @@
             // 
             // btnProveedores
             // 
-            this.btnProveedores.Location = new System.Drawing.Point(50, 260);
+            this.btnProveedores.Location = new System.Drawing.Point(50, 85);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Size = new System.Drawing.Size(290, 23);
             this.btnProveedores.TabIndex = 14;
@@ -68,16 +68,17 @@
             // 
             // btnFacturas
             // 
-            this.btnFacturas.Location = new System.Drawing.Point(50, 156);
+            this.btnFacturas.Location = new System.Drawing.Point(50, 127);
             this.btnFacturas.Name = "btnFacturas";
             this.btnFacturas.Size = new System.Drawing.Size(290, 23);
             this.btnFacturas.TabIndex = 12;
             this.btnFacturas.Text = "FACTURAS";
             this.btnFacturas.UseVisualStyleBackColor = true;
+            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
             // 
             // btnEmpleados
             // 
-            this.btnEmpleados.Location = new System.Drawing.Point(50, 106);
+            this.btnEmpleados.Location = new System.Drawing.Point(50, 44);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Size = new System.Drawing.Size(290, 23);
             this.btnEmpleados.TabIndex = 11;
@@ -87,7 +88,7 @@
             // 
             // btnComprasCli
             // 
-            this.btnComprasCli.Location = new System.Drawing.Point(50, 56);
+            this.btnComprasCli.Location = new System.Drawing.Point(50, 253);
             this.btnComprasCli.Name = "btnComprasCli";
             this.btnComprasCli.Size = new System.Drawing.Size(290, 23);
             this.btnComprasCli.TabIndex = 10;
