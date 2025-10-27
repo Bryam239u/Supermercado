@@ -155,14 +155,22 @@ namespace Supermercado.Frames
             int Id = Convert.ToInt32(dgvProductos[0, dgvProductos.CurrentCell.RowIndex].Value);
             cargarDatos(Id);
             Data datos = new Data();
-            String img = datos.GetValue("SELECT imagen FROM productos WHERE id =" +Id);
-            using (var image = new MagickImage(img))
+            try
             {
-                using (var ms = new System.IO.MemoryStream(image.ToByteArray(MagickFormat.Bmp)))
+                String img = datos.GetValue("SELECT imagen FROM productos WHERE id =" + Id);
+                using (var image = new MagickImage(img))
                 {
-                    pbImg.Image = new Bitmap(ms);
+                    using (var ms = new System.IO.MemoryStream(image.ToByteArray(MagickFormat.Bmp)))
+                    {
+                        pbImg.Image = new Bitmap(ms);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar la imagen" + ex.Message);
+            }
+            
         }
 
         private void eliminarTSM_Click(object sender, EventArgs e)

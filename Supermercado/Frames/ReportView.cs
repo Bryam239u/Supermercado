@@ -27,5 +27,12 @@ namespace Supermercado.Frames
             crystalReportViewer1.ReportSource = imprime;
             crystalReportViewer1.RefreshReport();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMenu m = new frmMenu();
+            m.Show();
+            this.Close();
+        }
     }
 }
