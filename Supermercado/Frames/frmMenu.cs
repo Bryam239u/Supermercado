@@ -51,5 +51,12 @@ namespace Supermercado.Frames
             f.Show();
             this.Hide();
         }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            frmProductos f = new frmProductos();
+            f.Show();
+            this.Hide();
+        }
     }
 }

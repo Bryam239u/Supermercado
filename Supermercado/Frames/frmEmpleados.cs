@@ -58,7 +58,7 @@ namespace Supermercado.Frames
                 txtbNombre.Text = row["nombre"].ToString();
                 txtbApellido.Text = row["apellido"].ToString();
                 txtbEdad.Text = row["edad"].ToString();
-                txtbFecha_nac.Text = row["fecha_nac"].ToString();
+                dtpFecha.Text = row["fecha_nac"].ToString();
                 txtbTipo_doc.Text = row["tipo_doc"].ToString();
                 txtbNro_doc.Text = row["nro_doc"].ToString();
                 txtbCuil.Text = row["cuil"].ToString();
@@ -68,7 +68,7 @@ namespace Supermercado.Frames
                 txtbEmail.Text = row["email"].ToString();
                 txtbCargo.Text = row["cargo"].ToString();
                 txtbAntiguedad.Text = row["antiguedad"].ToString();
-                txtbFecha_ingreso.Text = row["fecha_ingreso"].ToString();
+                dtpFechaI.Text = row["fecha_ingreso"].ToString();
                 txtbSalario_anual.Text = row["salario_anual"].ToString();
 
                 id = Id;
@@ -85,7 +85,7 @@ namespace Supermercado.Frames
             txtbNombre.Text = "";
             txtbApellido.Text = "";
             txtbEdad.Text = "";
-            txtbFecha_nac.Text = "";
+            dtpFecha.Text = "";
             txtbTipo_doc.Text = "";
             txtbNro_doc.Text = "";
             txtbCuil.Text = "";
@@ -95,7 +95,7 @@ namespace Supermercado.Frames
             txtbEmail.Text = "";
             txtbCargo.Text = "";
             txtbAntiguedad.Text = "";
-            txtbFecha_ingreso.Text = "";
+            dtpFechaI.Text = "";
             txtbSalario_anual.Text = "";
             btnAgregar.Text = "Agregar";
             id = -1;
@@ -120,7 +120,7 @@ namespace Supermercado.Frames
                     "'" + txtbNombre.Text + "', " +
                     "'" + txtbApellido.Text + "', " +
                     txtbEdad.Text + ", " +
-                    "'" + txtbFecha_nac.Text + "', " +
+                    "'" + dtpFecha.Text + "', " +
                     "'" + txtbTipo_doc.Text + "', " +
                     "'" + txtbNro_doc.Text + "', " +
                     "'" + txtbCuil.Text + "', " +
@@ -130,7 +130,7 @@ namespace Supermercado.Frames
                     "'" + txtbEmail.Text + "', " +
                     "'" + txtbCargo.Text + "', " +
                     "'" + txtbAntiguedad.Text + "', " +
-                    "'" + txtbFecha_ingreso.Text + "', " +
+                    "'" + dtpFechaI.Text + "', " +
                     txtbSalario_anual.Text + ")";
 
                 resultado = datos.ExecuteQuery(queryInsert);
@@ -153,7 +153,7 @@ namespace Supermercado.Frames
                     "nombre = '" + txtbNombre.Text + "', " +
                     "apellido = '" + txtbApellido.Text + "', " +
                     "edad = " + txtbEdad.Text + ", " +
-                    "fecha_nac = '" + txtbFecha_nac.Text + "', " +
+                    "fecha_nac = '" + dtpFecha.Text + "', " +
                     "tipo_doc = '" + txtbTipo_doc.Text + "', " +
                     "nro_doc = '" + txtbNro_doc.Text + "', " +
                     "cuil = '" + txtbCuil.Text + "', " +
@@ -163,7 +163,7 @@ namespace Supermercado.Frames
                     "email = '" + txtbEmail.Text + "', " +
                     "cargo = '" + txtbCargo.Text + "', " +
                     "antiguedad = '" + txtbAntiguedad.Text + "', " +
-                    "fecha_ingreso = '" + txtbFecha_ingreso.Text + "', " +
+                    "fecha_ingreso = '" + dtpFechaI.Text + "', " +
                     "salario_anual = " + txtbSalario_anual.Text + " " +
                     "WHERE id = " + id;
 
@@ -249,6 +249,34 @@ namespace Supermercado.Frames
             else
             {
                 MessageBox.Show("Error al cargar los datos");
+            }
+        }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime dia = DateTime.Now;
+            int edad = dia.Year - dtpFecha.Value.Year;
+            if (dtpFecha.Value.Date > dia)
+            {
+                txtbEdad.Text = (edad-1).ToString();
+            }
+            else
+            {
+                txtbEdad.Text = edad.ToString();
+            }
+        }
+
+        private void dtpFechaI_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime dia = DateTime.Now;
+            int antiguedad = dia.Year - dtpFechaI.Value.Year;
+            if (dtpFechaI.Value.Date > dia)
+            {
+                txtbAntiguedad.Text = (antiguedad - 1).ToString() + " Años";
+            }
+            else
+            {
+                txtbAntiguedad.Text = antiguedad.ToString() + " Años";
             }
         }
     }

@@ -38,7 +38,6 @@
             this.txtbCargo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtbSalario_anual = new System.Windows.Forms.TextBox();
-            this.txtbFecha_ingreso = new System.Windows.Forms.TextBox();
             this.txtbAntiguedad = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -47,7 +46,6 @@
             this.txtbCuil = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtbFecha_nac = new System.Windows.Forms.TextBox();
             this.txtbEdad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -67,6 +65,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaI = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.cmsOpc.SuspendLayout();
             this.SuspendLayout();
@@ -113,14 +113,14 @@
             // editarTSM
             // 
             this.editarTSM.Name = "editarTSM";
-            this.editarTSM.Size = new System.Drawing.Size(180, 22);
+            this.editarTSM.Size = new System.Drawing.Size(117, 22);
             this.editarTSM.Text = "Editar";
             this.editarTSM.Click += new System.EventHandler(this.editarTSM_Click);
             // 
             // eliminarTSM
             // 
             this.eliminarTSM.Name = "eliminarTSM";
-            this.eliminarTSM.Size = new System.Drawing.Size(180, 22);
+            this.eliminarTSM.Size = new System.Drawing.Size(117, 22);
             this.eliminarTSM.Text = "Eliminar";
             this.eliminarTSM.Click += new System.EventHandler(this.eliminarTSM_Click);
             // 
@@ -150,19 +150,12 @@
             this.txtbSalario_anual.Size = new System.Drawing.Size(241, 29);
             this.txtbSalario_anual.TabIndex = 15;
             // 
-            // txtbFecha_ingreso
-            // 
-            this.txtbFecha_ingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbFecha_ingreso.Location = new System.Drawing.Point(373, 381);
-            this.txtbFecha_ingreso.Name = "txtbFecha_ingreso";
-            this.txtbFecha_ingreso.Size = new System.Drawing.Size(241, 29);
-            this.txtbFecha_ingreso.TabIndex = 14;
-            // 
             // txtbAntiguedad
             // 
             this.txtbAntiguedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbAntiguedad.Location = new System.Drawing.Point(18, 381);
+            this.txtbAntiguedad.Location = new System.Drawing.Point(374, 381);
             this.txtbAntiguedad.Name = "txtbAntiguedad";
+            this.txtbAntiguedad.ReadOnly = true;
             this.txtbAntiguedad.Size = new System.Drawing.Size(241, 29);
             this.txtbAntiguedad.TabIndex = 13;
             // 
@@ -170,7 +163,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(370, 354);
+            this.label13.Location = new System.Drawing.Point(14, 354);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(159, 24);
             this.label13.TabIndex = 76;
@@ -190,7 +183,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(14, 354);
+            this.label15.Location = new System.Drawing.Point(370, 354);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(107, 24);
             this.label15.TabIndex = 74;
@@ -232,19 +225,12 @@
             this.label11.TabIndex = 70;
             this.label11.Text = "Cuil";
             // 
-            // txtbFecha_nac
-            // 
-            this.txtbFecha_nac.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbFecha_nac.Location = new System.Drawing.Point(18, 176);
-            this.txtbFecha_nac.Name = "txtbFecha_nac";
-            this.txtbFecha_nac.Size = new System.Drawing.Size(241, 29);
-            this.txtbFecha_nac.TabIndex = 4;
-            // 
             // txtbEdad
             // 
             this.txtbEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbEdad.Location = new System.Drawing.Point(678, 109);
+            this.txtbEdad.Location = new System.Drawing.Point(18, 176);
             this.txtbEdad.Name = "txtbEdad";
+            this.txtbEdad.ReadOnly = true;
             this.txtbEdad.Size = new System.Drawing.Size(241, 29);
             this.txtbEdad.TabIndex = 3;
             // 
@@ -252,7 +238,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 149);
+            this.label1.Location = new System.Drawing.Point(674, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(300, 24);
             this.label1.TabIndex = 67;
@@ -262,7 +248,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(674, 82);
+            this.label10.Location = new System.Drawing.Point(14, 149);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 24);
             this.label10.TabIndex = 66;
@@ -421,11 +407,39 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CustomFormat = "yyyy/MM/dd";
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(678, 108);
+            this.dtpFecha.MaxDate = new System.DateTime(2025, 10, 26, 0, 0, 0, 0);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(167, 29);
+            this.dtpFecha.TabIndex = 91;
+            this.dtpFecha.Value = new System.DateTime(2025, 10, 26, 0, 0, 0, 0);
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
+            // 
+            // dtpFechaI
+            // 
+            this.dtpFechaI.CustomFormat = "yyyy/MM/dd";
+            this.dtpFechaI.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaI.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaI.Location = new System.Drawing.Point(18, 381);
+            this.dtpFechaI.MaxDate = new System.DateTime(2025, 10, 26, 0, 0, 0, 0);
+            this.dtpFechaI.Name = "dtpFechaI";
+            this.dtpFechaI.Size = new System.Drawing.Size(167, 29);
+            this.dtpFechaI.TabIndex = 92;
+            this.dtpFechaI.Value = new System.DateTime(2025, 10, 26, 0, 0, 0, 0);
+            this.dtpFechaI.ValueChanged += new System.EventHandler(this.dtpFechaI_ValueChanged);
+            // 
             // frmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 803);
+            this.Controls.Add(this.dtpFechaI);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtBuscar);
@@ -436,7 +450,6 @@
             this.Controls.Add(this.txtbCargo);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtbSalario_anual);
-            this.Controls.Add(this.txtbFecha_ingreso);
             this.Controls.Add(this.txtbAntiguedad);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
@@ -445,7 +458,6 @@
             this.Controls.Add(this.txtbCuil);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtbFecha_nac);
             this.Controls.Add(this.txtbEdad);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label10);
@@ -480,7 +492,6 @@
         private System.Windows.Forms.TextBox txtbCargo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtbSalario_anual;
-        private System.Windows.Forms.TextBox txtbFecha_ingreso;
         private System.Windows.Forms.TextBox txtbAntiguedad;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
@@ -489,7 +500,6 @@
         private System.Windows.Forms.TextBox txtbCuil;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtbFecha_nac;
         private System.Windows.Forms.TextBox txtbEdad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
@@ -512,5 +522,7 @@
         private System.Windows.Forms.ContextMenuStrip cmsOpc;
         private System.Windows.Forms.ToolStripMenuItem editarTSM;
         private System.Windows.Forms.ToolStripMenuItem eliminarTSM;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.DateTimePicker dtpFechaI;
     }
 }
