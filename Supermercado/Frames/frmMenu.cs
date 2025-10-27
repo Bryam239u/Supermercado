@@ -72,5 +72,12 @@ namespace Supermercado.Frames
             cli.Show();
             this.Hide();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ReportView f = new ReportView();
+            f.Show();
+            this.Hide();
+        }
     }
 }
