@@ -248,14 +248,14 @@
             // editarTSM
             // 
             this.editarTSM.Name = "editarTSM";
-            this.editarTSM.Size = new System.Drawing.Size(180, 22);
+            this.editarTSM.Size = new System.Drawing.Size(117, 22);
             this.editarTSM.Text = "Editar";
             this.editarTSM.Click += new System.EventHandler(this.editarTSM_Click);
             // 
             // eliminarTSM
             // 
             this.eliminarTSM.Name = "eliminarTSM";
-            this.eliminarTSM.Size = new System.Drawing.Size(180, 22);
+            this.eliminarTSM.Size = new System.Drawing.Size(117, 22);
             this.eliminarTSM.Text = "Eliminar";
             this.eliminarTSM.Click += new System.EventHandler(this.eliminarTSM_Click);
             // 
@@ -282,7 +282,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvProveedores);
             this.Name = "frmProveedores";
-            this.Text = "frmProveedores";
+            this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.frmProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.cmsOpc.ResumeLayout(false);

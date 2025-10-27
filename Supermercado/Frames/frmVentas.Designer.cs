@@ -183,13 +183,6 @@
             // 
             this.cbEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEmp.FormattingEnabled = true;
-            this.cbEmp.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
             this.cbEmp.Location = new System.Drawing.Point(40, 123);
             this.cbEmp.Name = "cbEmp";
             this.cbEmp.Size = new System.Drawing.Size(164, 26);
@@ -199,13 +192,6 @@
             // 
             this.cbFac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFac.FormattingEnabled = true;
-            this.cbFac.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
             this.cbFac.Location = new System.Drawing.Point(40, 210);
             this.cbFac.Name = "cbFac";
             this.cbFac.Size = new System.Drawing.Size(164, 26);
@@ -370,7 +356,7 @@
             this.ClientSize = new System.Drawing.Size(945, 462);
             this.Controls.Add(this.Tab);
             this.Name = "frmVentas";
-            this.Text = "frmVentas";
+            this.Text = "Ventas";
             this.Load += new System.EventHandler(this.frmVentas_Load);
             this.Tab.ResumeLayout(false);
             this.Ventas.ResumeLayout(false);

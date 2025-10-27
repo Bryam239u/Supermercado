@@ -62,6 +62,18 @@ namespace Supermercado.Frames
         private void frmVentas_Load(object sender, EventArgs e)
         {
             mostrarDatos();
+            String res = datos.GetValue("SELECT COUNT(*) FROM empleados");
+            int n = int.Parse(res);
+            for (int i = 1; i <= n; i++)
+            {
+                cbEmp.Items.Add(i.ToString());
+            }
+            String res1 = datos.GetValue("SELECT COUNT(*) FROM facturas");
+            int n1 = int.Parse(res1);
+            for (int i = 1; i <= n1; i++)
+            {
+                cbFac.Items.Add(i.ToString());
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -183,6 +195,18 @@ namespace Supermercado.Frames
             if(Tab.SelectedTab == VentProd)
             {
                 mostrarDatosV();
+            }
+            String res = datos.GetValue("SELECT COUNT(*) FROM ventas");
+            int n = int.Parse(res);
+            for (int i = 1; i <= n; i++)
+            {
+                cbVenta.Items.Add(i.ToString());
+            }
+            String res1 = datos.GetValue("SELECT COUNT(*) FROM productos");
+            int n1 = int.Parse(res1);
+            for (int i = 1; i <= n1; i++)
+            {
+                cbProducto.Items.Add(i.ToString());
             }
         }
 

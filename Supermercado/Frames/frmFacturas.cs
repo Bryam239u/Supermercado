@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Supermercado.Frames
 {
@@ -235,6 +236,12 @@ namespace Supermercado.Frames
             if (Tab.SelectedTab == FacDet)
             {
                 mostrarDatosF();
+                String res = datos.GetValue("SELECT COUNT(*) FROM facturas");
+                int n = int.Parse(res);
+                for (int i = 1; i <= n; i++)
+                {
+                    cbIdF.Items.Add(i.ToString());
+                }
             }
         }
 

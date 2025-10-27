@@ -39,7 +39,7 @@
             // 
             // btnVentas
             // 
-            this.btnVentas.Location = new System.Drawing.Point(50, 308);
+            this.btnVentas.Location = new System.Drawing.Point(50, 167);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(290, 23);
             this.btnVentas.TabIndex = 15;
@@ -95,6 +95,7 @@
             this.btnComprasCli.TabIndex = 10;
             this.btnComprasCli.Text = "COMPRAS CLIENTES";
             this.btnComprasCli.UseVisualStyleBackColor = true;
+            this.btnComprasCli.Click += new System.EventHandler(this.btnComprasCli_Click);
             // 
             // btnClientes
             // 
