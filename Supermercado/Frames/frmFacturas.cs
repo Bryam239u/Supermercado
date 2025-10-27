@@ -325,5 +325,20 @@ namespace Supermercado.Frames
         {
             btnCerrar_Click(sender, e);
         }
+
+        private void txtBuscar2_TextChanged(object sender, EventArgs e)
+        {
+            DataSet ds = datos.getAllData("SELECT * FROM facturas_detalles Where " +
+            "descr_factura like '" + txtBuscar2.Text + "%' OR " +
+            "descr_pago like '" + txtBuscar2.Text + "%';");
+            if (ds != null)
+            {
+                dgvFacDet.DataSource = ds.Tables[0];
+            }
+            else
+            {
+                MessageBox.Show("Error al cargar los datos");
+            }
+        }
     }
 }

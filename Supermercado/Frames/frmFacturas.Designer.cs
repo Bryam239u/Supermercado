@@ -52,8 +52,6 @@
             this.Tab = new System.Windows.Forms.TabControl();
             this.Facturas = new System.Windows.Forms.TabPage();
             this.FacDet = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnRegresar2 = new System.Windows.Forms.Button();
             this.btnAgregar2 = new System.Windows.Forms.Button();
             this.txtbDescPago = new System.Windows.Forms.TextBox();
@@ -74,6 +72,8 @@
             this.cmsOpc2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtBuscar2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             this.cmsOpc.SuspendLayout();
             this.Tab.SuspendLayout();
@@ -299,7 +299,7 @@
             this.FacDet.Controls.Add(this.cbMetodoP);
             this.FacDet.Controls.Add(this.cbIdF);
             this.FacDet.Controls.Add(this.cbTipo);
-            this.FacDet.Controls.Add(this.textBox1);
+            this.FacDet.Controls.Add(this.txtBuscar2);
             this.FacDet.Controls.Add(this.label7);
             this.FacDet.Controls.Add(this.btnRegresar2);
             this.FacDet.Controls.Add(this.btnAgregar2);
@@ -323,25 +323,6 @@
             this.FacDet.Text = "Facturas Detalles";
             this.FacDet.UseVisualStyleBackColor = true;
             this.FacDet.Click += new System.EventHandler(this.tabPage2_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(427, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(439, 31);
-            this.textBox1.TabIndex = 51;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(90, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(331, 42);
-            this.label7.TabIndex = 50;
-            this.label7.Text = "Facturas detalles:";
             // 
             // btnRegresar2
             // 
@@ -552,16 +533,36 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
             this.toolStripMenuItem1.Text = "Editar";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(117, 22);
             this.toolStripMenuItem2.Text = "Eliminar";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(90, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(331, 42);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "Facturas detalles:";
+            // 
+            // txtBuscar2
+            // 
+            this.txtBuscar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar2.Location = new System.Drawing.Point(427, 10);
+            this.txtBuscar2.Name = "txtBuscar2";
+            this.txtBuscar2.Size = new System.Drawing.Size(439, 31);
+            this.txtBuscar2.TabIndex = 51;
+            this.txtBuscar2.TextChanged += new System.EventHandler(this.txtBuscar2_TextChanged);
             // 
             // frmFacturas
             // 
@@ -608,8 +609,6 @@
         private System.Windows.Forms.TabControl Tab;
         private System.Windows.Forms.TabPage Facturas;
         private System.Windows.Forms.TabPage FacDet;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnRegresar2;
         private System.Windows.Forms.Button btnAgregar2;
         private System.Windows.Forms.TextBox txtbDescPago;
@@ -630,5 +629,7 @@
         private System.Windows.Forms.ContextMenuStrip cmsOpc2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.TextBox txtBuscar2;
+        private System.Windows.Forms.Label label7;
     }
 }
