@@ -45,6 +45,7 @@
             this.btnVentas.TabIndex = 15;
             this.btnVentas.Text = "VENTAS";
             this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnProveedores
             // 

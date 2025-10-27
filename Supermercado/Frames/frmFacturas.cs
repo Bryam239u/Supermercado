@@ -284,7 +284,6 @@ namespace Supermercado.Frames
 
                 if (resultado)
                 {
-                    // Este mensaje estaba bien en tu original
                     MessageBox.Show("Actualizado con éxito", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiarF();
                     mostrarDatosF();
