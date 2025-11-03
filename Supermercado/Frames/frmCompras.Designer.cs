@@ -32,13 +32,13 @@
             this.cbCliente = new System.Windows.Forms.ComboBox();
             this.cbVenta = new System.Windows.Forms.ComboBox();
             this.dgvCompras = new System.Windows.Forms.DataGridView();
+            this.cmsOpc = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.eliminarTSM = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmsOpc = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.eliminarTSM = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
             this.cmsOpc.SuspendLayout();
             this.SuspendLayout();
@@ -47,24 +47,25 @@
             // 
             this.cbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCliente.FormattingEnabled = true;
-            this.cbCliente.Location = new System.Drawing.Point(13, 214);
+            this.cbCliente.Location = new System.Drawing.Point(24, 206);
             this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(164, 26);
+            this.cbCliente.Size = new System.Drawing.Size(187, 26);
             this.cbCliente.TabIndex = 76;
             // 
             // cbVenta
             // 
             this.cbVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbVenta.FormattingEnabled = true;
-            this.cbVenta.Location = new System.Drawing.Point(13, 127);
+            this.cbVenta.Location = new System.Drawing.Point(24, 119);
             this.cbVenta.Name = "cbVenta";
-            this.cbVenta.Size = new System.Drawing.Size(164, 26);
+            this.cbVenta.Size = new System.Drawing.Size(187, 26);
             this.cbVenta.TabIndex = 77;
             // 
             // dgvCompras
             // 
             this.dgvCompras.AllowUserToAddRows = false;
             this.dgvCompras.AllowUserToDeleteRows = false;
+            this.dgvCompras.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompras.ContextMenuStrip = this.cmsOpc;
             this.dgvCompras.Location = new System.Drawing.Point(324, 81);
@@ -72,6 +73,20 @@
             this.dgvCompras.ReadOnly = true;
             this.dgvCompras.Size = new System.Drawing.Size(555, 321);
             this.dgvCompras.TabIndex = 73;
+            // 
+            // cmsOpc
+            // 
+            this.cmsOpc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eliminarTSM});
+            this.cmsOpc.Name = "cmsOpc";
+            this.cmsOpc.Size = new System.Drawing.Size(118, 26);
+            // 
+            // eliminarTSM
+            // 
+            this.eliminarTSM.Name = "eliminarTSM";
+            this.eliminarTSM.Size = new System.Drawing.Size(117, 22);
+            this.eliminarTSM.Text = "Eliminar";
+            this.eliminarTSM.Click += new System.EventHandler(this.eliminarTSM_Click);
             // 
             // label1
             // 
@@ -86,22 +101,23 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(182, 331);
+            this.btnCerrar.Location = new System.Drawing.Point(38, 355);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(109, 46);
+            this.btnCerrar.Size = new System.Drawing.Size(213, 31);
             this.btnCerrar.TabIndex = 75;
             this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(2, 331);
+            this.btnAgregar.Location = new System.Drawing.Point(38, 303);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(116, 46);
+            this.btnAgregar.Size = new System.Drawing.Size(213, 31);
             this.btnAgregar.TabIndex = 74;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -111,7 +127,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 187);
+            this.label3.Location = new System.Drawing.Point(20, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 24);
             this.label3.TabIndex = 71;
@@ -121,31 +137,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 100);
+            this.label2.Location = new System.Drawing.Point(20, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 24);
             this.label2.TabIndex = 72;
             this.label2.Text = "Id Venta";
             // 
-            // cmsOpc
-            // 
-            this.cmsOpc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eliminarTSM});
-            this.cmsOpc.Name = "cmsOpc";
-            this.cmsOpc.Size = new System.Drawing.Size(118, 26);
-            // 
-            // eliminarTSM
-            // 
-            this.eliminarTSM.Name = "eliminarTSM";
-            this.eliminarTSM.Size = new System.Drawing.Size(180, 22);
-            this.eliminarTSM.Text = "Eliminar";
-            this.eliminarTSM.Click += new System.EventHandler(this.eliminarTSM_Click);
-            // 
             // frmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 450);
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.ClientSize = new System.Drawing.Size(890, 408);
             this.Controls.Add(this.cbCliente);
             this.Controls.Add(this.cbVenta);
             this.Controls.Add(this.dgvCompras);
@@ -155,6 +158,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "frmCompras";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Compras";
             this.Load += new System.EventHandler(this.frmCompras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).EndInit();

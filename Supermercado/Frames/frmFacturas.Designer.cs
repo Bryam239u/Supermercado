@@ -52,6 +52,11 @@
             this.Tab = new System.Windows.Forms.TabControl();
             this.Facturas = new System.Windows.Forms.TabPage();
             this.FacDet = new System.Windows.Forms.TabPage();
+            this.cbMetodoP = new System.Windows.Forms.ComboBox();
+            this.cbIdF = new System.Windows.Forms.ComboBox();
+            this.cbTipo = new System.Windows.Forms.ComboBox();
+            this.txtBuscar2 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnRegresar2 = new System.Windows.Forms.Button();
             this.btnAgregar2 = new System.Windows.Forms.Button();
             this.txtbDescPago = new System.Windows.Forms.TextBox();
@@ -66,14 +71,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dgvFacDet = new System.Windows.Forms.DataGridView();
-            this.cbTipo = new System.Windows.Forms.ComboBox();
-            this.cbMetodoP = new System.Windows.Forms.ComboBox();
-            this.cbIdF = new System.Windows.Forms.ComboBox();
             this.cmsOpc2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtBuscar2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             this.cmsOpc.SuspendLayout();
             this.Tab.SuspendLayout();
@@ -96,7 +96,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(157, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(183, 42);
@@ -131,6 +131,7 @@
             // 
             this.dgvFacturas.AllowUserToAddRows = false;
             this.dgvFacturas.AllowUserToDeleteRows = false;
+            this.dgvFacturas.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFacturas.ContextMenuStrip = this.cmsOpc;
             this.dgvFacturas.Location = new System.Drawing.Point(312, 69);
@@ -237,22 +238,23 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(612, 417);
+            this.btnCerrar.Location = new System.Drawing.Point(595, 445);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(109, 46);
+            this.btnCerrar.Size = new System.Drawing.Size(161, 46);
             this.btnCerrar.TabIndex = 68;
             this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(432, 417);
+            this.btnAgregar.Location = new System.Drawing.Point(389, 445);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(116, 46);
+            this.btnAgregar.Size = new System.Drawing.Size(162, 46);
             this.btnAgregar.TabIndex = 67;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -271,6 +273,7 @@
             // 
             // Facturas
             // 
+            this.Facturas.BackColor = System.Drawing.Color.AntiqueWhite;
             this.Facturas.Controls.Add(this.dgvFacturas);
             this.Facturas.Controls.Add(this.label1);
             this.Facturas.Controls.Add(this.btnCerrar);
@@ -292,10 +295,10 @@
             this.Facturas.Size = new System.Drawing.Size(943, 565);
             this.Facturas.TabIndex = 0;
             this.Facturas.Text = "Facturas";
-            this.Facturas.UseVisualStyleBackColor = true;
             // 
             // FacDet
             // 
+            this.FacDet.BackColor = System.Drawing.Color.AntiqueWhite;
             this.FacDet.Controls.Add(this.cbMetodoP);
             this.FacDet.Controls.Add(this.cbIdF);
             this.FacDet.Controls.Add(this.cbTipo);
@@ -321,27 +324,84 @@
             this.FacDet.Size = new System.Drawing.Size(943, 565);
             this.FacDet.TabIndex = 1;
             this.FacDet.Text = "Facturas Detalles";
-            this.FacDet.UseVisualStyleBackColor = true;
             this.FacDet.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // cbMetodoP
+            // 
+            this.cbMetodoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMetodoP.FormattingEnabled = true;
+            this.cbMetodoP.Items.AddRange(new object[] {
+            "EFECTIVO",
+            "CHEQUE",
+            "TARJETA CREDITO",
+            "TARJETA DEBITO"});
+            this.cbMetodoP.Location = new System.Drawing.Point(7, 419);
+            this.cbMetodoP.Name = "cbMetodoP";
+            this.cbMetodoP.Size = new System.Drawing.Size(276, 26);
+            this.cbMetodoP.TabIndex = 6;
+            // 
+            // cbIdF
+            // 
+            this.cbIdF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbIdF.FormattingEnabled = true;
+            this.cbIdF.Location = new System.Drawing.Point(11, 79);
+            this.cbIdF.Name = "cbIdF";
+            this.cbIdF.Size = new System.Drawing.Size(164, 26);
+            this.cbIdF.TabIndex = 1;
+            // 
+            // cbTipo
+            // 
+            this.cbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipo.FormattingEnabled = true;
+            this.cbTipo.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D"});
+            this.cbTipo.Location = new System.Drawing.Point(11, 144);
+            this.cbTipo.Name = "cbTipo";
+            this.cbTipo.Size = new System.Drawing.Size(164, 26);
+            this.cbTipo.TabIndex = 2;
+            // 
+            // txtBuscar2
+            // 
+            this.txtBuscar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar2.Location = new System.Drawing.Point(427, 10);
+            this.txtBuscar2.Name = "txtBuscar2";
+            this.txtBuscar2.Size = new System.Drawing.Size(439, 31);
+            this.txtBuscar2.TabIndex = 51;
+            this.txtBuscar2.TextChanged += new System.EventHandler(this.txtBuscar2_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(90, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(331, 42);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "Facturas detalles:";
             // 
             // btnRegresar2
             // 
+            this.btnRegresar2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnRegresar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar2.Location = new System.Drawing.Point(639, 448);
+            this.btnRegresar2.Location = new System.Drawing.Point(629, 477);
             this.btnRegresar2.Name = "btnRegresar2";
-            this.btnRegresar2.Size = new System.Drawing.Size(140, 46);
+            this.btnRegresar2.Size = new System.Drawing.Size(177, 46);
             this.btnRegresar2.TabIndex = 49;
             this.btnRegresar2.Text = "Cerrar";
-            this.btnRegresar2.UseVisualStyleBackColor = true;
+            this.btnRegresar2.UseVisualStyleBackColor = false;
             this.btnRegresar2.Click += new System.EventHandler(this.btnRegresar2_Click);
             // 
             // btnAgregar2
             // 
-            this.btnAgregar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnAgregar2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar2.Location = new System.Drawing.Point(459, 448);
+            this.btnAgregar2.Location = new System.Drawing.Point(416, 477);
             this.btnAgregar2.Name = "btnAgregar2";
-            this.btnAgregar2.Size = new System.Drawing.Size(147, 46);
+            this.btnAgregar2.Size = new System.Drawing.Size(175, 46);
             this.btnAgregar2.TabIndex = 41;
             this.btnAgregar2.Text = "Agregar";
             this.btnAgregar2.UseVisualStyleBackColor = false;
@@ -454,6 +514,7 @@
             // 
             this.dgvFacDet.AllowUserToAddRows = false;
             this.dgvFacDet.AllowUserToDeleteRows = false;
+            this.dgvFacDet.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -478,43 +539,6 @@
             this.dgvFacDet.Size = new System.Drawing.Size(604, 328);
             this.dgvFacDet.TabIndex = 33;
             // 
-            // cbTipo
-            // 
-            this.cbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D"});
-            this.cbTipo.Location = new System.Drawing.Point(11, 144);
-            this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(164, 26);
-            this.cbTipo.TabIndex = 2;
-            // 
-            // cbMetodoP
-            // 
-            this.cbMetodoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMetodoP.FormattingEnabled = true;
-            this.cbMetodoP.Items.AddRange(new object[] {
-            "EFECTIVO",
-            "CHEQUE",
-            "TARJETA CREDITO",
-            "TARJETA DEBITO"});
-            this.cbMetodoP.Location = new System.Drawing.Point(7, 419);
-            this.cbMetodoP.Name = "cbMetodoP";
-            this.cbMetodoP.Size = new System.Drawing.Size(276, 26);
-            this.cbMetodoP.TabIndex = 6;
-            // 
-            // cbIdF
-            // 
-            this.cbIdF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbIdF.FormattingEnabled = true;
-            this.cbIdF.Location = new System.Drawing.Point(11, 79);
-            this.cbIdF.Name = "cbIdF";
-            this.cbIdF.Size = new System.Drawing.Size(164, 26);
-            this.cbIdF.TabIndex = 1;
-            // 
             // cmsOpc2
             // 
             this.cmsOpc2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -537,33 +561,15 @@
             this.toolStripMenuItem2.Text = "Eliminar";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(90, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(331, 42);
-            this.label7.TabIndex = 50;
-            this.label7.Text = "Facturas detalles:";
-            // 
-            // txtBuscar2
-            // 
-            this.txtBuscar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar2.Location = new System.Drawing.Point(427, 10);
-            this.txtBuscar2.Name = "txtBuscar2";
-            this.txtBuscar2.Size = new System.Drawing.Size(439, 31);
-            this.txtBuscar2.TabIndex = 51;
-            this.txtBuscar2.TextChanged += new System.EventHandler(this.txtBuscar2_TextChanged);
-            // 
             // frmFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(964, 572);
             this.Controls.Add(this.Tab);
             this.Name = "frmFacturas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facturas";
             this.Load += new System.EventHandler(this.frmFacturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();

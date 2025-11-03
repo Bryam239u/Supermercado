@@ -65,22 +65,23 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(515, 364);
+            this.btnCerrar.Location = new System.Drawing.Point(489, 364);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(109, 46);
+            this.btnCerrar.Size = new System.Drawing.Size(170, 46);
             this.btnCerrar.TabIndex = 124;
             this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(335, 364);
+            this.btnAgregar.Location = new System.Drawing.Point(282, 364);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(116, 46);
+            this.btnAgregar.Size = new System.Drawing.Size(181, 46);
             this.btnAgregar.TabIndex = 123;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -99,7 +100,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label16.Location = new System.Drawing.Point(181, 9);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(196, 42);
@@ -263,6 +264,7 @@
             this.dgvProductos.AllowUserToAddRows = false;
             this.dgvProductos.AllowUserToDeleteRows = false;
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvProductos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.ContextMenuStrip = this.cmsOpc;
             this.dgvProductos.Location = new System.Drawing.Point(13, 427);
@@ -335,6 +337,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(963, 721);
             this.Controls.Add(this.pbImg);
             this.Controls.Add(this.comboBox1);

@@ -94,6 +94,7 @@
             this.dgvEmpleados.AllowUserToAddRows = false;
             this.dgvEmpleados.AllowUserToDeleteRows = false;
             this.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvEmpleados.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleados.ContextMenuStrip = this.cmsOpc;
             this.dgvEmpleados.Location = new System.Drawing.Point(18, 509);
@@ -377,7 +378,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label16.Location = new System.Drawing.Point(186, 18);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(225, 42);
@@ -386,22 +387,23 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(524, 442);
+            this.btnCerrar.Location = new System.Drawing.Point(521, 442);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(109, 46);
+            this.btnCerrar.Size = new System.Drawing.Size(139, 46);
             this.btnCerrar.TabIndex = 90;
             this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(344, 442);
+            this.btnAgregar.Location = new System.Drawing.Point(295, 442);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(116, 46);
+            this.btnAgregar.Size = new System.Drawing.Size(153, 46);
             this.btnAgregar.TabIndex = 89;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -437,6 +439,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(978, 803);
             this.Controls.Add(this.dtpFechaI);
             this.Controls.Add(this.dtpFecha);
